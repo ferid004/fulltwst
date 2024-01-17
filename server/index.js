@@ -10,7 +10,7 @@ const proSchema = new mongoose.Schema({
     name: String,
     src:String,
     info:String,
-    price:String,
+    price:Number,
 
   });
 
