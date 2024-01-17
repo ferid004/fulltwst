@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 function Add() {
-  const [product, setProduct] = useState()
+  const [product, setProduct] = useState([])
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('')
   const axiosAllData = async () => {

@@ -1,13 +1,15 @@
 import React from 'react'
 import './index.scss'
 import { Helmet } from 'react-helmet-async'
+import Product from '../../components/product'
 function Home() {
   return (
     <div>
       <Helmet>
         <title>Home</title>
       </Helmet>
-      Home</div>
+      <Product></Product>
+      </div>
   )
 }
 

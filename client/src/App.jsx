@@ -8,27 +8,35 @@ import Basket from './pages/basket';
 import Detail from './pages/detail';
 import Home from './pages/home';
 import Wish from './pages/wish';
+import { BasketProvider } from './context/basketContex';
+import { WishProvider } from './context/wishContext';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <HelmetProvider>
+      <HelmetProvider>
+        <BasketProvider>
 
-      <BrowserRouter>
-        <Routes>
-          <Route element={<MainLayout></MainLayout>} path='/'>
-            <Route element={<Home></Home>} index></Route>
-            <Route element={<Add></Add>} path='/add'></Route>
-            <Route element={<Basket></Basket>} path='/basket'></Route>
-            <Route element={<Wish></Wish>} path='/wish'></Route>
-            <Route element={<Detail></Detail>} path='/detail/:id'></Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          <WishProvider>
 
-    </HelmetProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route element={<MainLayout></MainLayout>} path='/'>
+                  <Route element={<Home></Home>} index></Route>
+                  <Route element={<Add></Add>} path='/add'></Route>
+                  <Route element={<Basket></Basket>} path='/basket'></Route>
+                  <Route element={<Wish></Wish>} path='/wish'></Route>
+                  <Route element={<Detail></Detail>} path='/detail/:id'></Route>
+                </Route>
+              </Routes>
+            </BrowserRouter>
+          </WishProvider>
+
+        </BasketProvider>
+
+      </HelmetProvider>
     </>
   )
 }

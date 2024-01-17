@@ -1,0 +1,29 @@
+.wish {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+p{
+    font-weight: 900;
+    font-size: 46px;
+}
+    .basbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        .del {
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
