@@ -14,7 +14,7 @@ function Wish() {
           <div className="basbox" key={item._id}>
             <div className="">NAME : {item.name}</div>
             <div className="box"><img src={item.src} alt="" /></div>
-            <div className="">INFO:{item.info}</div>
+            <div className="info">INFO:{item.info}</div>
             <div className="">PRICE:{item.price}</div>
             <div onClick={() => handlewish(item)}><button className="del" >delete</button></div>
           </div>
